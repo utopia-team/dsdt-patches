@@ -3,7 +3,7 @@ name: ACPI error
 about: Tell us what's your problem and we'll help you
 title: "[BUG]"
 labels: bug
-assignees: dreamwhite, 1alessandro1
+assignees: 1alessandro1, dreamwhite
 
 ---
 
