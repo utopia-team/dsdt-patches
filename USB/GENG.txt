@@ -1,0 +1,20 @@
+#Maintained by: Gengik84 from macos86.it
+#GENG.txt
+# Credits to Gengik84
+
+into scope label \_SB.PCI0.XHC.RHUB insert
+begin
+Method ( GENG, 2, NotSerialized)\n
+{\n
+Name (PCKG, Package (0x04)\n
+{\n
+Zero, \n
+0x00, //Proprietary connector aka USB2\n
+Zero, \n
+Zero\n
+})\n
+PCKG [Zero] = Arg0 //This tells to replace the first element of our Package with the Arg0 that is passed\n
+PCKG [One] = Arg1 //This tells to replace the first element of our Package with the Arg0 that is passed\n
+Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.GENG.PCKG */
+}
+end;
