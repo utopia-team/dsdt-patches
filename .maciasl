@@ -1,7 +1,7 @@
 [Battery] B1B2 Method					Battery/B1B2.txt
 [Battery] B1B4 Method					Battery/B1B4.txt
-[USB] GENG Method					USB/GENG.txt
-[Windows] Windows 7 Patch				Windows/Windows_7.txt
-[Windows] Windows 8 Patch				Windows/Windows_8.txt
-[Windows] Windows 8.1 Patch				Windows/Windows_8.1.txt
-[Windows] Windows 10 Patch				Windows/Windows_10.txt
+[USB] GENG Method					USB/Disable_USB.txt
+[USB] GENG Method                                       USB/USB3.txt
+[USB] GENG Method                                       USB/USB2_Internal.txt
+[USB] GENG Method                                       USB/USB2_External.txt
+[USB] GENG Method                                       USB/GENG_Method.txt
