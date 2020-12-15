@@ -1,0 +1,7 @@
+#Maintained by: Gengik84 from macos86.it
+#Disable_USB.txt
+# Credits to Gengik84
+
+into method label _UPC parent_label \_SB.PCI0.XHC.RHUB.XSxx replace_content begin
+Return (GUPC (Zero))
+end;

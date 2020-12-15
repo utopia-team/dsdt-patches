@@ -1,5 +1,5 @@
 #Maintained by: Gengik84 from macos86.it
-#GENG.txt
+#GENG_Method.txt
 # Credits to Gengik84
 
 into scope label \_SB.PCI0.XHC.RHUB insert
