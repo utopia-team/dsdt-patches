@@ -1,7 +1,9 @@
 #Maintained by: Gengik84 from macos86.it
 #Disable_USB.txt
+# Please note that some firmwares may not have GUPC method available. With the use of this patch, you can easily disable a USB port
+# Please be sure to change XSxx with the right port name like "HSxx" or "SSxx"
 # Credits to Gengik84
 
 into method label _UPC parent_label \_SB.PCI0.XHC.RHUB.XSxx replace_content begin
-Return (GUPC (Zero))
+Return (GENG (Zero, Zero))
 end;
