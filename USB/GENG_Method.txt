@@ -1,20 +1,36 @@
 #Maintained by: Gengik84 from macos86.it
 #GENG_Method.txt
 # Credits to Gengik84
+# The first argument tells if the port has to be enabled (One) or disabled (Zero)
+# The second argument specifies the connector type. Below a table with the connector-types extracted from https://uefi.org/sites/default/files/resources/ACPI_6_3_May16.pdf#page=523
 
-into scope label \_SB.PCI0.XHC.RHUB insert
-begin
-Method ( GENG, 2, NotSerialized)\n
-{\n
-Name (PCKG, Package (0x04)\n
-{\n
-Zero, \n
-0x00, //Proprietary connector aka USB2\n
-Zero, \n
-Zero\n
-})\n
-PCKG [Zero] = Arg0 //This tells to replace the first element of our Package with the Arg0 that is passed\n
-PCKG [One] = Arg1 //This tells to replace the first element of our Package with the Arg0 that is passed\n
-Return (PCKG) /* \_SB_.PCI0.XHC_.RHUB.GENG.PCKG */
-}
+# |Value    |USB Type|
+# |0x00     |Type 'A' connector aka USB2|
+# |0x01     |Mini-AB connector|
+# |0x02     |ExpressCard|
+# |0x03     |USB 3 Standard-A connector|
+# |0x04     |USB 3 Standard-B connector|
+# |0x05     |USB 3 Micro-B connector|
+# |0x06     |USB 3 Micro-AB connector|
+# |0x07     |USB 3 Power-B connector|
+# |0x08     |Type C connector - USB2-only|
+# |0x09     |Type C connector USB2 and SS with Switch|
+# |0x0A     |Type C connector - USB2 and SS without Switch|
+# |0x0B-0xFE|Reserved|
+# |0xFF|Proprietary connector|
+
+into scope label \_SB.PCI0.XHC.RHUB insert begin
+Method (GENG, 2, Serialized)\n
+        {\n
+            Name (PCKG, Package (0x04)\n
+            {\n
+                Zero, \n
+                0xFF, \n
+                Zero, \n
+                Zero\n
+            })\n
+            PCKG [Zero] = Arg0\n
+            PCKG [One] = Arg1\n
+            Return (PCKG) /* \GENG.PCKG */\n
+        }\n
 end;
