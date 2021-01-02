@@ -3,5 +3,5 @@
 [USB] Disable USB _UPC Method				USB/Disable_USB.txt
 [USB] USB3 Connector _UPC Method			USB/USB3.txt
 [USB] Internal USB2 Connector _UPC Method		USB/USB2_Internal.txt
-[USB] External USB2 Conenctor _UPC Method		USB/USB2_External.txt
+[USB] External USB2 Connector _UPC Method		USB/USB2_External.txt
 [USB] GENG Method					USB/GENG_Method.txt
